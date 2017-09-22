@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Created by Administrator on 2017/9/19.
  */
 @Configuration
-@EnableTransactionManagement
 public class DruidConfig {
 
     /**
@@ -36,6 +35,7 @@ public class DruidConfig {
      * 配置过滤器
      * @return
      */
+    @Bean
     public FilterRegistrationBean statFilter() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
         filterRegistrationBean.addUrlPatterns("/*");//添加过滤规则

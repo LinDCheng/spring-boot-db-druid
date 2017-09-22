@@ -28,7 +28,6 @@ import java.lang.reflect.Method;
 @EnableCaching //开启缓存
 public class RedisConfig extends CachingConfigurerSupport{
 
-
     /**
      * 使用RedisTemple调用redis，用JSON格式作数据交换处理复杂对象
      * @param redisConnectionFactory
@@ -49,7 +48,7 @@ public class RedisConfig extends CachingConfigurerSupport{
 
 
     /**
-     * 使用注解方式对简单对象进行缓存
+     * 设置缓存失效时间
      * @param redisTemplate
      * @return
      */
